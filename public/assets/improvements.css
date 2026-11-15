@@ -1,0 +1,35 @@
+/* Route panel stays directly above its route button. */
+#route-panel{position:fixed;top:auto;left:auto;right:24px;bottom:320px;max-height:calc(100vh - 340px);overflow:auto}
+.expanded-map #route-panel{position:fixed;top:88px;right:65px;bottom:auto;left:auto;max-height:calc(100vh - 110px)}
+#hazard-assessment{border:1px solid var(--line);border-radius:12px;margin:14px 0 0;padding:10px;font-size:10px;color:var(--muted)}
+#hazard-assessment legend{color:var(--accent);font-size:11px}#hazard-assessment p{margin:3px 0 8px;line-height:1.45}#hazard-assessment label{display:block;margin:6px 0;color:var(--text)}
+#landmark-brief{border-top:1px solid var(--line);margin-top:14px;padding-top:10px;font-size:12px;line-height:1.5}#landmark-brief img{display:block;width:100%;max-height:150px;object-fit:cover;margin:0 0 10px;border-radius:9px}#landmark-brief p{margin:0 0 9px}#landmark-brief a{color:var(--accent)}
+#location-card{box-sizing:border-box;max-width:calc(30vw - 38px);max-height:calc(100vh - 150px);overflow-y:auto;overflow-wrap:anywhere;pointer-events:auto}
+.landmark-label{position:absolute;z-index:3;transform:translate(-50%,-100%);text-align:center;font:11px monospace;color:var(--accent);padding:0;cursor:pointer}
+.landmark-label span{display:block;background:#151a1bcc;border:1px solid var(--line);padding:8px 12px;border-radius:12px;white-space:nowrap}
+.landmark-label i{display:block;height:32px;width:1px;background:var(--accent);margin:8px auto 0}
+@media(max-width:640px){#location-card{max-width:calc(30vw - 22px);max-height:calc(100vh - 120px)}#location-card h2{font-size:16px;overflow-wrap:anywhere}#landmark-brief{font-size:11px}}
+@media(max-width:640px){#route-panel{right:14px;bottom:270px;left:14px}.expanded-map #route-panel{top:82px;right:14px;left:14px;bottom:auto}}
+.opening-actions{display:flex;flex-direction:column;align-items:center;gap:10px}
+.opening-actions .pill{min-width:190px;justify-content:space-between}
+#mission-panel{position:fixed;left:26px;top:115px;width:340px;max-width:calc(100vw - 52px);max-height:calc(100vh - 210px);overflow-y:auto;z-index:8;animation:missionPanelIn .32s cubic-bezier(.16,1,.3,1)}
+#mission-panel .mission-step-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:6px}
+#mission-panel h2{font-weight:400;font-size:18px;margin:0 0 12px;letter-spacing:-.3px}
+#mission-body{font-size:12px;line-height:1.65;color:var(--ink)}
+#mission-body p{margin:0 0 10px}
+#mission-body p:last-child{margin-bottom:0}
+#mission-body code,#mission-body b{color:var(--accent);font:11px monospace}
+.mission-slide{animation:missionTextLeft .34s cubic-bezier(.16,1,.3,1)}
+.mission-quick{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.mission-chip{border:1px solid var(--line);background:#ffffff08;color:var(--accent);border-radius:12px;padding:8px 12px;font:11px monospace;display:inline-flex;align-items:center;gap:6px}
+.mission-chip:hover{background:#ffffff14;border-color:var(--accent)}
+.mission-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line);margin-top:14px;padding-top:12px}
+.mission-dots{display:flex;gap:6px;align-items:center}
+.mission-dots i{width:6px;height:6px;border-radius:50%;background:var(--line);display:block;transition:all .2s}
+.mission-dots i.active{width:18px;border-radius:4px;background:var(--accent)}
+.mission-nav{display:flex;align-items:center;gap:12px}
+.mission-nav .text-button{padding:6px 4px;font-size:11px;color:var(--muted)}
+.mission-nav .primary{padding:8px 14px;font-size:11px;border-radius:11px}
+@keyframes missionPanelIn{from{transform:translateX(-48px);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes missionTextLeft{from{transform:translateX(-28px);opacity:0}to{transform:translateX(0);opacity:1}}
+@media(max-width:640px){#mission-panel{left:14px;right:14px;top:86px;width:auto;max-width:none;max-height:42vh}}

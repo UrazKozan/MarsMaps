@@ -1,0 +1,11 @@
+.DS_Store
+.vercel
+node_modules
+bin/
+*.log
+
+# Preserve the local high-resolution MOLA source cache without committing it.
+public/assets/hires/dem128/
+public/assets/hires/normal128/
+public/assets/hires/topography128/
+public/assets/hires/elevation-32.bin

@@ -1,0 +1,204 @@
+{
+  "elevation": {
+    "url": "assets/hires/elevation-16.bin",
+    "width": 5760,
+    "height": 2880,
+    "encoding": "int16-le",
+    "west": -180,
+    "north": 90,
+    "pixelCenters": true,
+    "metersPerPixelEquator": 3697.3709372717376,
+    "sourceResolutionPPD": 32,
+    "note": "16ppd averaged overview of NASA MOLA32ppd; numerical heights in meters above areoid."
+  },
+  "nativeElevation": {
+    "url": "assets/hires/elevation-32.bin",
+    "width": 11520,
+    "height": 5760,
+    "encoding": "int16-le",
+    "west": -180,
+    "north": 90,
+    "pixelCenters": true
+  },
+  "relief": "assets/hires/topography-8k.jpg",
+  "normal": "assets/hires/normal-8k.png",
+  "surface": "assets/hires/surface-8k.jpg",
+  "sources": [
+    {
+      "title": "NASA PDS MOLA MEGDR32ppd",
+      "url": "https://pds-geosciences.wustl.edu/missions/mgs/megdr.html",
+      "note": "NASA MGS/MOLA heights; derived normal uses physical metric slopes without exaggeration. Native bins include interpolation where observations absent."
+    },
+    {
+      "title": "NASA Trek MGS MOLA Global Color Shaded Relief (463m)",
+      "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/WMTSCapabilities.xml",
+      "note": "Official NASA MGS MOLA rainbow color-coded shaded relief mosaic (128 ppd, 463 m/px). Level 4 global 8K overview stored locally; native NASA WMTS endpoint streams levels 0–7."
+    },
+    {
+      "title": "NASA Trek Viking VIS global color mosaic",
+      "url": "https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars",
+      "note": "Native Viking MDIM21 color mosaic. Separate surface imagery layer; not merged with topography, ice or hazards. NASA WMTS level4 overview8192×4096; native endpoint supports levels0–7."
+    },
+    {
+      "title": "NASA PDS MOLA128ppd complete cylindrical terrain",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/meg128/",
+      "note": "All16 NASA MOLA128ppd tiles ingested losslessly into512×512 little-endian signed-meter browser tiles. Tangent-space normal maps independently derived from this elevation. Cylindrical coverage88S–88N; outer2degree caps use separately reprojected NASA512ppd polar products at128ppd output."
+    },
+    {
+      "title": "NASA PDS MOLA512ppd polar topography",
+      "url": "https://pds-geosciences.wustl.edu/mgs/urn-nasa-pds-mgs_mola_topography_derived/polar/",
+      "note": "Highest MOLA polar maps:12288×12288, unsigned16bit with stored*.25-8000meters. Reprojected only outer2degree caps into global128ppd output; original~115m sampling is not retained in latitude direction. North0E down/south0E up; orientation verified against overlapping128ppd observations. No voids observed in selected caps."
+    },
+    {
+      "title": "NASA-cataloged CTX native tile metadata",
+      "url": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer?f=pjson",
+      "note": "NASA/JPL/MSSS/Caltech Murray Lab/Esri. NASA Trek links this endpoint.512×512tiles, two columns and one row at level0. Level12 approximately5.1m/pixel; levels13–17 do not add physical source detail. NASA WMTS wrapper contains stale256pixel metadata; use native metadata."
+    }
+  ],
+  "reliefScale": [
+    {
+      "meters": -8200,
+      "color": "#51235d"
+    },
+    {
+      "meters": -6000,
+      "color": "#5335b8"
+    },
+    {
+      "meters": -4000,
+      "color": "#3887d6"
+    },
+    {
+      "meters": -2000,
+      "color": "#58d742"
+    },
+    {
+      "meters": 0,
+      "color": "#e8f150"
+    },
+    {
+      "meters": 2000,
+      "color": "#e09759"
+    },
+    {
+      "meters": 4000,
+      "color": "#c55b53"
+    },
+    {
+      "meters": 8000,
+      "color": "#ad8c84"
+    },
+    {
+      "meters": 14000,
+      "color": "#e3d9d6"
+    },
+    {
+      "meters": 21200,
+      "color": "#ffffff"
+    }
+  ],
+  "surfaceTiles": {
+    "urlTemplate": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/{z}/{y}/{x}.jpg",
+    "tileSize": 256,
+    "minZoom": 0,
+    "maxZoom": 7,
+    "baseColumns": 2,
+    "baseRows": 1,
+    "west": -180,
+    "north": 90,
+    "sourceResolutionMeters": 232,
+    "corsVerified": true
+  },
+  "reliefTilesWMTS": {
+    "urlTemplate": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MGS_MOLA_ClrShade_merge_global_463m/1.0.0/default/default028mm/{z}/{y}/{x}.jpg",
+    "tileSize": 256,
+    "minZoom": 0,
+    "maxZoom": 7,
+    "baseColumns": 2,
+    "baseRows": 1,
+    "west": -180,
+    "north": 90,
+    "sourceResolutionMeters": 463,
+    "corsVerified": true
+  },
+  "ctxTiles": {
+    "urlTemplate": "https://astro.arcgis.com/arcgis/rest/services/OnMars/CTX/MapServer/tile/{z}/{y}/{x}",
+    "tileSize": 512,
+    "minZoom": 0,
+    "maxZoom": 12,
+    "baseColumns": 2,
+    "baseRows": 1,
+    "west": -180,
+    "north": 90,
+    "sourceResolutionMeters": 5,
+    "maxTileResolutionMetersEquator": 5.09,
+    "corsVerified": true,
+    "note": "NASA MRO CTX beta01 uncontrolled grayscale mosaic. Native ArcGIS metadata verifies512pixel tiles; level12 matches~5m source resolution. Service levels13–17 oversample the same observations. No imagery or hazard layers blended.",
+    "serviceMaxZoom": 17
+  },
+  "detail": {
+    "directory": "assets/hires/dem128",
+    "width": 46080,
+    "height": 23040,
+    "tileSize": 512,
+    "urlTemplate": "assets/hires/dem128/{x}_{y}.bin",
+    "encoding": "int16-le",
+    "west": -180,
+    "north": 90,
+    "pixelCenters": true,
+    "sourcePixelsPerDegree": 128,
+    "metersPerPixelEquator": 462.1713671589672,
+    "polarSource": {
+      "latitudeAbsGreaterThan": 88,
+      "sourcePixelsPerDegree": 512,
+      "sourceProjection": "polar stereographic",
+      "outputPixelsPerDegree": 128,
+      "method": "bilinear reprojection; quarter-meter source rounded to int16 meters"
+    },
+    "note": "Highest global MOLA cylindrical product:128ppd between88S and88N; outer2degree caps use NASA512ppd polar maps reprojected to this128ppd cylindrical output. Finer HiRISE DEMs exist only regionally; this is not global sub-meter terrain."
+  },
+  "normalTiles": {
+    "directory": "assets/hires/normal128",
+    "width": 46080,
+    "height": 23040,
+    "tileSize": 512,
+    "urlTemplate": "assets/hires/normal128/{x}_{y}.png",
+    "encoding": "png-rgb",
+    "west": -180,
+    "north": 90,
+    "pixelCenters": true,
+    "sourcePixelsPerDegree": 128,
+    "metersPerPixelEquator": 462.1713671589672,
+    "polarSource": {
+      "latitudeAbsGreaterThan": 88,
+      "sourcePixelsPerDegree": 512,
+      "sourceProjection": "polar stereographic",
+      "outputPixelsPerDegree": 128,
+      "method": "bilinear reprojection; quarter-meter source rounded to int16 meters"
+    },
+    "note": "Highest global MOLA cylindrical product:128ppd between88S and88N; outer2degree caps use NASA512ppd polar maps reprojected to this128ppd cylindrical output. Finer HiRISE DEMs exist only regionally; this is not global sub-meter terrain."
+  },
+  "reliefTiles": {
+    "directory": "assets/hires/topography128",
+    "width": 46080,
+    "height": 23040,
+    "tileSize": 512,
+    "urlTemplate": "assets/hires/topography128/{x}_{y}.png",
+    "encoding": "png-rgb",
+    "west": -180,
+    "north": 90,
+    "pixelCenters": true,
+    "sourcePixelsPerDegree": 128,
+    "metersPerPixelEquator": 462.1713671589672,
+    "polarSource": {
+      "latitudeAbsGreaterThan": 88,
+      "sourcePixelsPerDegree": 512,
+      "sourceProjection": "polar stereographic",
+      "outputPixelsPerDegree": 128,
+      "method": "bilinear reprojection; quarter-meter source rounded to int16 meters"
+    },
+    "note": "Official NASA MOLA color hillshade mosaic tiles aligned to 128ppd grid."
+  },
+  "normalSource": "128ppd native metric elevation gradients, no vertical exaggeration. Polar caps derive from512ppd source, sampled into128ppd output.",
+  "ctxSurface": "assets/hires/ctx-2k.jpg"
+}

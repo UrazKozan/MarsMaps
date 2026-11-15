@@ -1,0 +1,149 @@
+{
+  "texture": "assets/mars-color.jpg",
+  "landmarks": [
+    {
+      "name": "Jezero Crater",
+      "lat": 18,
+      "lon": 77,
+      "note": "Approximate regional location from NASA landing press kit.",
+      "descriptionTr": "NASA'nın iniş basın kitine göre yaklaşık bölgesel konum."
+    },
+    {
+      "name": "Perseverance Landing Site",
+      "lat": 18.44463,
+      "lon": 77.45088,
+      "note": "Landing point, not current rover position.",
+      "descriptionTr": "Bu, iniş noktasıdır; keşif aracının güncel konumu değildir."
+    },
+    {
+      "name": "Gale Crater",
+      "lat": -5,
+      "lon": 138,
+      "note": "Approximate crater center from NASA/JPL.",
+      "descriptionTr": "NASA/JPL verilerine göre kraterin yaklaşık merkezi."
+    },
+    {
+      "name": "Curiosity Landing Region",
+      "lat": -4.5,
+      "lon": 137.4,
+      "note": "Planned landing region; not current rover position.",
+      "descriptionTr": "Planlanan iniş bölgesi; keşif aracının güncel konumu değildir."
+    },
+    {
+      "name": "Olympus Mons",
+      "lat": 18,
+      "lon": -134,
+      "note": "Approximate regional center from NASA NTRS research paper.",
+      "descriptionTr": "NASA NTRS araştırma makalesine göre bölgenin yaklaşık merkezi."
+    },
+    {
+      "name": "Valles Marineris",
+      "lat": -14,
+      "lon": 74,
+      "history": "NASA describes Valles Marineris as Mars' great canyon system, more than 3,000 km long and averaging about 8 km deep. This point is an approximate central location within the mapped canyon system.",
+      "descriptionTr": "NASA, Valles Marineris'i Mars'ın 3.000 km'den uzun ve ortalama yaklaşık 8 km derinliğindeki büyük kanyon sistemi olarak tanımlar. Bu nokta, haritalanan kanyon sisteminin yaklaşık merkezidir.",
+      "photo": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA00422.jpg",
+      "source": "https://science.nasa.gov/photojournal/valles-marineris/"
+    },
+    {
+      "name": "Gusev Crater",
+      "lat": -14.5,
+      "lon": 175.4,
+      "history": "Gusev Crater is about 165 km across. NASA selected the crater for Spirit, and the Ma'adim Vallis channel enters from the south-southeast.",
+      "descriptionTr": "Gusev Krateri yaklaşık 165 km çapındadır. NASA bu krateri Spirit keşif aracı için seçmiştir; Ma'adim Vallis kanalı kratere güney-güneydoğudan ulaşır.",
+      "photo": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA04260.jpg",
+      "source": "https://science.nasa.gov/photojournal/gusev-crater-5/"
+    },
+    {
+      "name": "Hellas Planitia",
+      "lat": -42,
+      "lon": -75,
+      "history": "Hellas Planitia occupies the floor of the ancient Hellas impact basin. NASA's Viking view identifies the surrounding basin as roughly 1,800 km in diameter.",
+      "descriptionTr": "Hellas Planitia, eski Hellas çarpma havzasının tabanında yer alır. NASA'nın Viking görüntüsüne göre çevresindeki havzanın çapı yaklaşık 1.800 km'dir.",
+      "photo": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/jpegPIA00416.jpg",
+      "source": "https://science.nasa.gov/photojournal/hellas-planitia/"
+    },
+    {
+      "name": "Elysium Planitia",
+      "lat": 3,
+      "lon": 150,
+      "history": "Elysium Planitia is a broad volcanic plain. NASA's Mariner 4 archive includes an image at the Elysium–Amazonis Planitia border; this is an approximate regional point.",
+      "descriptionTr": "Elysium Planitia geniş bir volkanik düzlüktür. NASA'nın Mariner 4 arşivinde Elysium–Amazonis Planitia sınırına ait bir görüntü bulunur; bu nokta yaklaşık bölgesel konumu gösterir.",
+      "source": "https://science.nasa.gov/resource/mariner-4-image-of-the-area-between-elysium-and-amazonis-planitia-on-mars/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "NASA Mars Image Texture",
+      "url": "https://science.nasa.gov/3d-resources/mars/",
+      "note": "Viking image mosaic processed at USGS; NASA/JPL-Caltech. 1440 \u00d7 720 global visualization texture; not a height map."
+    },
+    {
+      "title": "NASA/JPL Mars 2020 Landing Press Kit",
+      "url": "https://www.jpl.nasa.gov/news/press_kits/mars_2020/landing/quick_facts/",
+      "note": "Approximate Jezero region coordinates."
+    },
+    {
+      "title": "NASA NTRS: Mars 2020 landing assessment",
+      "url": "https://ntrs.nasa.gov/citations/20210024480",
+      "note": "Perseverance touchdown at 18.44463\u00b0N, 77.45088\u00b0E."
+    },
+    {
+      "title": "NASA/JPL Gale Crater overview",
+      "url": "https://www.jpl.nasa.gov/images/pia12507-perspective-view-of-layered-mound-in-gale-crater-mars/",
+      "note": "Approximate Gale center 5\u00b0S, 138\u00b0E."
+    },
+    {
+      "title": "NASA Gale landing region",
+      "url": "https://science.nasa.gov/resource/oblique-view-of-gale-crater-from-the-northwest/",
+      "note": "Planned Curiosity landing region 4.5\u00b0S, 137.4\u00b0E."
+    },
+    {
+      "title": "NASA NTRS: Martian diurnal waves",
+      "url": "https://ntrs.nasa.gov/api/citations/20230001896/downloads/20230001896-Hinson_2022_Diurnal_waves%5B1%5D.pdf",
+      "note": "Approximate Olympus Mons regional coordinates 18\u00b0N, 226\u00b0E."
+    },
+    {
+      "title": "NASA PDS: MGS MOLA MEGDR topography",
+      "url": "https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=MGS-M-MOLA-5-MEGDR-L3-V1.0",
+      "note": "MEGT90N000CB, version 2.0: signed 16-bit big-endian elevations in meters above areoid, 4 pixels/degree (14.818 km equatorial pixels). Reordered from 0\u2013360\u00b0 to \u2212180\u2013180\u00b0; no invented terrain. Too coarse for local route safety."
+    },
+    {
+      "title": "MOLA elevation color visualization",
+      "url": "https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=MGS-M-MOLA-5-MEGDR-L3-V1.0",
+      "note": "Derived directly from the included MOLA numeric grid. Piecewise-linear elevation color scale in meters above areoid: \u22128068 navy #0d1e4a; \u22124000 blue #1d5e97; 0 teal #51978c; 5000 ochre #e1b96f; 10000 rust #b75733; 15000 rose #c5998b; 21134 ivory #f7f0e8. Colors encode elevation, not natural surface color, temperature, or safety."
+    }
+  ],
+  "elevation": "assets/elevation.json",
+  "relief": "assets/mars-relief.png",
+  "reliefScale": [
+    {
+      "meters": -8068,
+      "color": "#0d1e4a"
+    },
+    {
+      "meters": -4000,
+      "color": "#1d5e97"
+    },
+    {
+      "meters": 0,
+      "color": "#51978c"
+    },
+    {
+      "meters": 5000,
+      "color": "#e1b96f"
+    },
+    {
+      "meters": 10000,
+      "color": "#b75733"
+    },
+    {
+      "meters": 15000,
+      "color": "#c5998b"
+    },
+    {
+      "meters": 21134,
+      "color": "#f7f0e8"
+    }
+  ]
+}

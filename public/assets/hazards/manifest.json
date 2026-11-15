@@ -1,0 +1,294 @@
+{
+  "projection": "equirectangular",
+  "west": -180,
+  "north": 90,
+  "pixelCenters": true,
+  "layers": [
+    {
+      "id": "water",
+      "label": "Water-equivalent hydrogen",
+      "texture": "assets/hazards/water.png",
+      "values": "assets/hazards/water.json",
+      "source": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ODY-M-GRS-5-ELEMENTS-V1.0",
+      "url": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ODY-M-GRS-5-ELEMENTS-V1.0",
+      "download": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/unsmoothed/2x2/h2o_2x2.tab",
+      "unit": "wt%",
+      "min": 0,
+      "max": 27.255,
+      "width": 180,
+      "height": 90,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": true,
+      "kind": "ice",
+      "resolutionDegrees": 2,
+      "resolutionKmAtEquator": 118.3,
+      "validFraction": 0.498,
+      "colorScale": [
+        {
+          "value": 0,
+          "color": "#34251f"
+        },
+        {
+          "value": 2,
+          "color": "#866943"
+        },
+        {
+          "value": 5,
+          "color": "#6bb0ad"
+        },
+        {
+          "value": 10,
+          "color": "#3874b5"
+        },
+        {
+          "value": 27.255,
+          "color": "#bddfff"
+        }
+      ],
+      "noDataColor": "#1d2126",
+      "observationPeriod": "2002-06-04 to 2005-04-03",
+      "coverageNote": "Polar masking and unphysical negative fits remain no-data. Coarse orbital composition, not toxicity or a safe/unsafe mask. GRS effective footprint is about 300 km; bin spacing does not imply finer instrument resolution. Water-equivalent hydrogen is not proof of shallow accessible pure ice.",
+      "routingUse": "Optional abundance objective only; no safe/unsafe threshold established."
+    },
+    {
+      "id": "chlorine",
+      "label": "Chlorine abundance",
+      "texture": "assets/hazards/chlorine.png",
+      "values": "assets/hazards/chlorine.json",
+      "source": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ODY-M-GRS-5-ELEMENTS-V1.0",
+      "url": "https://pds.nasa.gov/ds-view/pds/viewDataset.jsp?dsid=ODY-M-GRS-5-ELEMENTS-V1.0",
+      "download": "https://pds-geosciences.wustl.edu/ody/ody-m-grs-5-elements-v1/odgm_xxxx/data/unsmoothed/5x5/cl_5x5.tab",
+      "unit": "wt%",
+      "min": 0,
+      "max": 1.04,
+      "width": 72,
+      "height": 36,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": true,
+      "kind": "composition",
+      "resolutionDegrees": 5,
+      "resolutionKmAtEquator": 295.8,
+      "validFraction": 0.5783,
+      "colorScale": [
+        {
+          "value": 0,
+          "color": "#23322b"
+        },
+        {
+          "value": 0.25,
+          "color": "#488668"
+        },
+        {
+          "value": 0.5,
+          "color": "#d3bc64"
+        },
+        {
+          "value": 0.75,
+          "color": "#ca7651"
+        },
+        {
+          "value": 1.04,
+          "color": "#934c78"
+        }
+      ],
+      "noDataColor": "#1d2126",
+      "observationPeriod": "2002-06-04 to 2005-04-03",
+      "coverageNote": "Polar masking and unphysical negative fits remain no-data. Coarse orbital composition, not toxicity or a safe/unsafe mask. GRS effective footprint is about 300 km; bin spacing does not imply finer instrument resolution. Total chlorine is not a perchlorate concentration map.",
+      "routingUse": "Optional abundance objective only; no safe/unsafe threshold established."
+    },
+    {
+      "id": "thermal",
+      "label": "Thermal inertia (night)",
+      "texture": "assets/hazards/thermal-inertia.webp",
+      "values": "assets/hazards/thermal-inertia.json",
+      "source": "https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=MGS-M-TES-5-TIMAP-V1.0",
+      "url": "https://pds.nasa.gov/ds-view/pds/viewProfile.jsp?dsid=MGS-M-TES-5-TIMAP-V1.0",
+      "download": "https://pds-geosciences.wustl.edu/mgs/mgs-m-tes-5-timap-v1/mgst_9001/data/global_ti_night_2007.img",
+      "unit": "J m⁻² K⁻¹ s⁻½",
+      "min": 5,
+      "max": 5000,
+      "width": 7200,
+      "height": 3600,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": true,
+      "kind": "thermal-inertia",
+      "resolutionDegrees": 0.05,
+      "resolutionKmAtEquator": 2.96,
+      "numericSamplingDegrees": 0.5,
+      "validFraction": 0.8831,
+      "colorScale": [
+        {
+          "value": 5,
+          "color": "#172a54"
+        },
+        {
+          "value": 50,
+          "color": "#2d618d"
+        },
+        {
+          "value": 100,
+          "color": "#438d99"
+        },
+        {
+          "value": 200,
+          "color": "#85b4a0"
+        },
+        {
+          "value": 400,
+          "color": "#d8cf7a"
+        },
+        {
+          "value": 800,
+          "color": "#d99a54"
+        },
+        {
+          "value": 1600,
+          "color": "#c45c4c"
+        },
+        {
+          "value": 5000,
+          "color": "#8c3c69"
+        }
+      ],
+      "noDataColor": "#1d2126",
+      "observationPeriod": "1999-02 to 2004-04",
+      "coverageNote": "Measured-source pixels only; archive-interpolated pixels are masked. This is thermal inertia, NOT temperature or heat safety. Surface temperature depends on season, local time, albedo and atmospheric conditions.",
+      "routingUse": "Informational thermal property only; never used as a temperature threshold.",
+      "lossless": true
+    },
+    {
+      "id": "thermalDay",
+      "label": "Thermal inertia (day)",
+      "texture": "assets/hazards/thermal-inertia-day.jpg",
+      "available": true,
+      "source": "https://marsoweb.nas.nasa.gov/globalData/images/fullscale/TES_original.jpg",
+      "url": "https://marsoweb.nas.nasa.gov/globalData/images/fullscale/TES_original.jpg",
+      "unit": "J m⁻² K⁻¹ s⁻½",
+      "width": 2473,
+      "height": 1252,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": false,
+      "kind": "thermal-inertia",
+      "resolutionDegrees": 0.145,
+      "resolutionKmAtEquator": 8.58,
+      "validFraction": 0.73,
+      "colorScale": [{"value":24,"color":"#5d2bd9"},{"value":179,"color":"#24dce7"},{"value":334,"color":"#d9ed25"},{"value":490,"color":"#f7a119"},{"value":645,"color":"#f0331a"},{"value":800,"color":"#ffe8e8"}],
+      "noDataColor": "#000000",
+      "coverageNote": "NASA Mars OWeb / TES thermal-inertia visualization supplied by the user. The published image is labelled Mars Surface Thermal Inertia; it is displayed separately and is not treated as temperature, a safety threshold, or a route exclusion mask.",
+      "routingUse": "Informational only; a mission hazard threshold is not provided by this visualization."
+    },
+    {
+      "id": "radiation",
+      "label": "Radiation exposure",
+      "texture": "assets/hazards/radiation.png",
+      "values": "assets/hazards/radiation.json",
+      "kind": "radiation",
+      "available": false,
+      "source": "https://science.nasa.gov/photojournal/estimated-radiation-dosage-on-mars/",
+      "url": "https://science.nasa.gov/photojournal/estimated-radiation-dosage-on-mars/",
+      "download": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia03/pia03480/PIA03480.tif",
+      "unit": "rem / yr",
+      "min": 10,
+      "max": 20,
+      "width": 2880,
+      "height": 1440,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": true,
+      "resolutionDegrees": 0.125,
+      "resolutionKmAtEquator": 7.39,
+      "numericSamplingDegrees": 1,
+      "validFraction": 0.9035,
+      "colorScale": [
+        {
+          "value": 10,
+          "color": "#010487"
+        },
+        {
+          "value": 12,
+          "color": "#0052f9"
+        },
+        {
+          "value": 14,
+          "color": "#1ef6ea"
+        },
+        {
+          "value": 16,
+          "color": "#ecf824"
+        },
+        {
+          "value": 18,
+          "color": "#f54f01"
+        },
+        {
+          "value": 20,
+          "color": "#7f090f"
+        }
+      ],
+      "noDataColor": "#1d2126",
+      "coverageNote": "Source-only: NASA PIA03480 is a historical dual-hemisphere illustration, not a georeferenced quantitative global raster. It is intentionally not rendered as a navigable map or used for route decisions.",
+      "routingUse": "Unavailable: a mission-specific radiation model requires calibrated local and time-dependent measurements."
+    },
+    {
+      "id": "temperature",
+      "label": "Surface temperature",
+      "texture": "assets/hazards/temperature.png",
+      "values": "assets/hazards/temperature.json",
+      "kind": "temperature",
+      "available": false,
+      "source": "https://science.nasa.gov/photojournal/temperature-of-the-martian-surface/",
+      "url": "https://science.nasa.gov/photojournal/temperature-of-the-martian-surface/",
+      "download": "https://assets.science.nasa.gov/content/dam/science/psd/photojournal/pia/pia02/pia02014/PIA02014.tif",
+      "unit": "°C",
+      "min": -120,
+      "max": -65,
+      "width": 2000,
+      "height": 1000,
+      "north": 90,
+      "west": -180,
+      "pixelCenters": true,
+      "resolutionDegrees": 0.18,
+      "resolutionKmAtEquator": 10.65,
+      "numericSamplingDegrees": 1,
+      "validFraction": 0.944,
+      "colorScale": [
+        {
+          "value": -120,
+          "color": "#5402d4"
+        },
+        {
+          "value": -110,
+          "color": "#0c49e4"
+        },
+        {
+          "value": -100,
+          "color": "#05ef8d"
+        },
+        {
+          "value": -90,
+          "color": "#c5f604"
+        },
+        {
+          "value": -80,
+          "color": "#fc5a04"
+        },
+        {
+          "value": -75,
+          "color": "#fc383a"
+        },
+        {
+          "value": -65,
+          "color": "#fcfefc"
+        }
+      ],
+      "noDataColor": "#1d2126",
+      "coverageNote": "Source-only: NASA PIA02014 is an annotated historical temperature illustration, not a route-ready georeferenced global numerical field. It is intentionally not rendered as a navigable map or used for route decisions.",
+      "routingUse": "Unavailable: temperature safety needs location, season, local time, atmosphere and equipment thresholds."
+    }
+  ],
+  "note": "NASA scientific products, separately rendered. No image blending. Missing or negative physical estimates shown as no data, not safe. Color palettes are application visualizations of the supplied numeric values."
+}
