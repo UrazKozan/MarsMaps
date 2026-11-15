@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: marsmaps
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    autoDeployTrigger: commit
